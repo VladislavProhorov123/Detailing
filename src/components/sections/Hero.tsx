@@ -14,11 +14,11 @@ export function Hero() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/det.mov" type="video/mp4" />
+        <source src="/det.mp4" type="video/mp4" />
       </video>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-black/65" />
+      <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-black/20 to-black/40" />
 
       {/* Content */}

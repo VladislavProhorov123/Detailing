@@ -1,26 +1,181 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ========================================
+     COLORS
+  ======================================== */
+
+  --background: #090909;
+  --background-secondary: #111111;
+  --background-tertiary: #171717;
+  --background-elevated: #1d1d1d;
+
+  --foreground: #ffffff;
+  --foreground-secondary: #a3a3a3;
+  --foreground-muted: #737373;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+
+  /* Glass */
+  --glass-background: rgba(10, 10, 10, 0.55);
+  --glass-background-light: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+
+  /* Overlay */
+  --overlay-dark: rgba(0, 0, 0, 0.45);
+  --overlay-strong: rgba(0, 0, 0, 0.7);
+
+  /* ========================================
+     SPACING
+  ======================================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ========================================
+     BORDER RADIUS
+  ======================================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* ========================================
+     TRANSITIONS
+  ======================================== */
+
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ========================================
+     LAYOUT
+  ======================================== */
+
+  --container-width: 1440px;
+  --container-padding: 24px;
+
+  /* ========================================
+     SHADOWS
+  ======================================== */
+
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 80px rgba(0, 0, 0, 0.5);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@import "tailwindcss";
+
+:root {
+  /* ========================================
+     COLORS
+  ======================================== */
+
+  --background: #090909;
+  --background-secondary: #111111;
+  --background-tertiary: #171717;
+  --background-elevated: #1d1d1d;
+
+  --foreground: #ffffff;
+  --foreground-secondary: #a3a3a3;
+  --foreground-muted: #737373;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.2);
+
+  /* Glass */
+  --glass-background: rgba(10, 10, 10, 0.55);
+  --glass-background-light: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+
+  /* Overlay */
+  --overlay-dark: rgba(0, 0, 0, 0.45);
+  --overlay-strong: rgba(0, 0, 0, 0.7);
+
+  /* ========================================
+     SPACING
+  ======================================== */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ========================================
+     BORDER RADIUS
+  ======================================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* ========================================
+     TRANSITIONS
+  ======================================== */
+
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ========================================
+     LAYOUT
+  ======================================== */
+
+  --container-width: 1440px;
+  --container-padding: 24px;
+
+  /* ========================================
+     SHADOWS
+  ======================================== */
+
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 80px rgba(0, 0, 0, 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
+.container {
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-width)
+  );
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --container-padding: 16px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
